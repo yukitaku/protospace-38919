@@ -21,8 +21,8 @@ class PrototypesController < ApplicationController
   end
 
   def show
-
-
+    @comment = Comment.new
+    @comments = @prototype.comments
   end
 
   def edit
@@ -43,7 +43,7 @@ class PrototypesController < ApplicationController
       redirect_to root_path
     end
   end
-  
+
   private
 
   def prototype_params
